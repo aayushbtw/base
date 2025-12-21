@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "globals",
+  "title": "Globals",
+  "description": "Default Tailwind config for all projects.",
+  "dependencies": [
+    "tailwindcss@^4.1.18",
+    "@tailwindcss/typography"
+  ],
+  "files": [
+    {
+      "path": "registry/default/globals.css",
+      "content": "/* biome-ignore-all lint/suspicious/noUnknownAtRules: invalid for tailwind*/\n\n@import \"tailwindcss\";\n@plugin \"@tailwindcss/typography\";\n\n@theme {\n  --color-bg-1: var(--color-white);\n  --color-bg-2: var(--color-gray-100);\n\n  --color-fg-1: var(--color-gray-950);\n  --color-fg-2: var(--color-gray-800);\n  --color-fg-3: var(--color-gray-500);\n\n  --color-brand: var(--color-orange-500);\n\n  --color-border: var(--color-gray-300);\n\n  /*  */\n\n  --spacing: 0.25rem;\n  --spacing-xs: calc(var(--spacing) * 1);\n  --spacing-sm: calc(var(--spacing) * 2);\n  --spacing-md: calc(var(--spacing) * 4);\n  --spacing-lg: calc(var(--spacing) * 6);\n  --spacing-xl: calc(var(--spacing) * 8);\n  --spacing-2xl: calc(var(--spacing) * 10);\n  --spacing-3xl: calc(var(--spacing) * 12);\n  --spacing-4xl: calc(var(--spacing) * 14);\n  --spacing-5xl: calc(var(--spacing) * 16);\n  --spacing-6xl: calc(var(--spacing) * 18);\n  --spacing-7xl: calc(var(--spacing) * 20);\n}\n\n@layer base {\n  *,\n  ::after,\n  ::before,\n  ::backdrop,\n  ::file-selector-button {\n    @apply border-border outline-border;\n  }\n\n  html {\n    @apply motion-safe:scroll-smooth;\n  }\n\n  svg {\n    @apply stroke-[1.75px];\n  }\n\n  body {\n    @apply bg-bg-1 text-[15px] text-fg-3 leading-[1.65] selection:bg-brand/10 mx-auto flex w-full max-w-260 flex-col px-sm py-xl md:flex-row md:py-7xl;\n  }\n\n  header {\n    @apply flex flex-1 justify-start;\n  }\n\n  main {\n    @apply mt-md flex flex-4 flex-col gap-xl md:mt-0;\n  }\n}\n@utility heading {\n  @apply font-medium text-fg-1 text-lg;\n  letter-spacing: -0.01em;\n}\n\n@utility subheading {\n  @apply font-normal text-fg-2;\n}\n\n@utility paragraph {\n  @apply font-normal text-fg-3;\n}\n\n@utility link {\n  @apply underline-offset-3 underline decoration-2 decoration-brand/70 hover:underline-offset-4 transition-all duration-300;\n}\n\n/* Animtion */\n\n@keyframes fade-in-up {\n  from {\n    opacity: 0;\n    transform: translateY(20px);\n  }\n  to {\n    opacity: 1;\n    transform: translateY(0);\n  }\n}\n\n@utility stagger-* {\n  animation: fade-in-up 0.5s cubic-bezier(0.21, 0.47, 0.32, 0.98) both;\n  animation-delay: calc(--value(integer) * 0.05s);\n}\n",
+      "type": "registry:style"
+    }
+  ],
+  "type": "registry:style"
+}

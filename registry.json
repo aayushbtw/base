@@ -1,0 +1,56 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "registry",
+  "homepage": "https://github.com/aayushbtw/registry",
+  "items": [
+    {
+      "name": "globals",
+      "type": "registry:style",
+      "title": "Globals",
+      "description": "Default Tailwind config for all projects.",
+      "files": [
+        {
+          "path": "registry/default/globals.css",
+          "type": "registry:style"
+        }
+      ],
+      "dependencies": ["tailwindcss@^4.1.18", "@tailwindcss/typography"]
+    },
+    {
+      "name": "card",
+      "type": "registry:ui",
+      "title": "Card",
+      "description": "Compound card component.",
+      "files": [
+        {
+          "path": "registry/default/ui/card.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "animated-link-text",
+      "type": "registry:ui",
+      "title": "Animated Link Text",
+      "description": "Link text with animated brackets.",
+      "files": [
+        {
+          "path": "registry/default/ui/animated-link-text.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "navigation-menu",
+      "type": "registry:ui",
+      "title": "Navigation Menu",
+      "description": "Navigation menu with active states.",
+      "files": [
+        {
+          "path": "registry/default/ui/navigation-menu.tsx",
+          "type": "registry:component"
+        }
+      ]
+    }
+  ]
+}

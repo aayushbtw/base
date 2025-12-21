@@ -1,0 +1,14 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "card",
+  "title": "Card",
+  "description": "Compound card component.",
+  "files": [
+    {
+      "path": "registry/default/ui/card.tsx",
+      "content": "import { cn } from \"@/lib/utils\";\n\nfunction Card({ className, ...props }: React.ComponentProps<\"div\">) {\n  return (\n    <div\n      className={cn(\"flex flex-col gap-y-sm\", className)}\n      data-slot=\"card\"\n      {...props}\n    />\n  );\n}\n\nfunction CardHeader({ className, ...props }: React.ComponentProps<\"div\">) {\n  return <div className={className} data-slot=\"card-header\" {...props} />;\n}\n\nfunction CardTitle({ className, ...props }: React.ComponentProps<\"h1\">) {\n  return (\n    <h1\n      className={cn(\"heading\", className)}\n      data-slot=\"card-title\"\n      {...props}\n    />\n  );\n}\n\nfunction CardDescription({ className, ...props }: React.ComponentProps<\"h2\">) {\n  return (\n    <h2\n      className={cn(\"subheading\", className)}\n      data-slot=\"card-description\"\n      {...props}\n    />\n  );\n}\n\nfunction CardContent({ className, ...props }: React.ComponentProps<\"div\">) {\n  return (\n    <div\n      className={cn(\"paragraph flex flex-col gap-y-xs\", className)}\n      data-slot=\"card-content\"\n      {...props}\n    />\n  );\n}\n\nexport { Card, CardHeader, CardTitle, CardDescription, CardContent };\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:ui"
+}
