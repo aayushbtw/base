@@ -10,8 +10,9 @@
       "description": "Default Tailwind config for all projects.",
       "files": [
         {
-          "path": "registry/default/globals.css",
-          "type": "registry:style"
+          "path": "registry/globals.css",
+          "type": "registry:style",
+          "target": "styles/globals.css"
         }
       ],
       "dependencies": ["tailwindcss@^4.1.18", "@tailwindcss/typography"]
@@ -23,7 +24,7 @@
       "description": "Compound card component.",
       "files": [
         {
-          "path": "registry/default/ui/card.tsx",
+          "path": "registry/ui/card.tsx",
           "type": "registry:component"
         }
       ]
@@ -35,7 +36,7 @@
       "description": "Link text with animated brackets.",
       "files": [
         {
-          "path": "registry/default/ui/animated-link-text.tsx",
+          "path": "registry/ui/animated-link-text.tsx",
           "type": "registry:component"
         }
       ]
@@ -47,10 +48,23 @@
       "description": "Navigation menu with active states.",
       "files": [
         {
-          "path": "registry/default/ui/navigation-menu.tsx",
+          "path": "registry/ui/navigation-menu.tsx",
           "type": "registry:component"
         }
       ]
+    },
+    {
+      "name": "navbar",
+      "type": "registry:block",
+      "title": "Navbar",
+      "description": "Navbar component with active route detection.",
+      "files": [
+        {
+          "path": "registry/blocks/navbar.tsx",
+          "type": "registry:block"
+        }
+      ],
+      "registryDependencies": ["navigation-menu"]
     }
   ]
 }
