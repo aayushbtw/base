@@ -4,13 +4,14 @@
   "title": "Navbar",
   "description": "Navbar component with active route detection.",
   "registryDependencies": [
-    "navigation-menu"
+    "base/navigation-menu"
   ],
   "files": [
     {
-      "path": "registry/blocks/navbar.tsx",
+      "path": "registry/default/blocks/navbar.tsx",
       "content": "\"use client\";\n\nimport { usePathname } from \"next/navigation\";\nimport {\n  NavigationMenu,\n  NavigationMenuItem,\n  NavigationMenuLink,\n  NavigationMenuList,\n} from \"@/components/ui/navigation-menu\";\n\ntype NavLink = {\n  name: string;\n  url: string;\n  external?: boolean;\n};\n\nfunction Navbar({ links }: { links: NavLink[] }) {\n  const pathname = usePathname();\n\n  return (\n    <NavigationMenu>\n      <NavigationMenuList>\n        {links.map((item) => {\n          const isActive =\n            item.url === \"/\" ? pathname === \"/\" : pathname.startsWith(item.url);\n\n          return (\n            <NavigationMenuItem key={item.name}>\n              <NavigationMenuLink\n                active={isActive}\n                external={item.external}\n                href={item.url}\n              >\n                {item.name}\n              </NavigationMenuLink>\n            </NavigationMenuItem>\n          );\n        })}\n      </NavigationMenuList>\n    </NavigationMenu>\n  );\n}\n\nexport { Navbar };\n",
-      "type": "registry:block"
+      "type": "registry:block",
+      "target": "base/navbar.tsx"
     }
   ],
   "type": "registry:block"

@@ -1,6 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry.json",
-  "name": "registry",
+  "name": "base",
   "homepage": "https://github.com/aayushbtw/registry",
   "items": [
     {
@@ -10,9 +10,9 @@
       "description": "Default Tailwind config for all projects.",
       "files": [
         {
-          "path": "registry/globals.css",
+          "path": "registry/default/styles/globals.css",
           "type": "registry:style",
-          "target": "styles/globals.css"
+          "target": "base/globals.css"
         }
       ],
       "dependencies": ["tailwindcss@^4.1.18", "@tailwindcss/typography"]
@@ -24,8 +24,9 @@
       "description": "Compound card component.",
       "files": [
         {
-          "path": "registry/ui/card.tsx",
-          "type": "registry:component"
+          "path": "registry/default/ui/card.tsx",
+          "type": "registry:component",
+          "target": "base/ui/card.tsx"
         }
       ]
     },
@@ -36,8 +37,9 @@
       "description": "Link text with animated brackets.",
       "files": [
         {
-          "path": "registry/ui/animated-link-text.tsx",
-          "type": "registry:component"
+          "path": "registry/default/ui/animated-link-text.tsx",
+          "type": "registry:component",
+          "target": "base/ui/animated-link-text.tsx"
         }
       ]
     },
@@ -48,8 +50,9 @@
       "description": "Navigation menu with active states.",
       "files": [
         {
-          "path": "registry/ui/navigation-menu.tsx",
-          "type": "registry:component"
+          "path": "registry/default/ui/navigation-menu.tsx",
+          "type": "registry:component",
+          "target": "base/ui/navigation-menu.tsx"
         }
       ]
     },
@@ -60,11 +63,12 @@
       "description": "Navbar component with active route detection.",
       "files": [
         {
-          "path": "registry/blocks/navbar.tsx",
-          "type": "registry:block"
+          "path": "registry/default/blocks/navbar.tsx",
+          "type": "registry:block",
+          "target": "base/navbar.tsx"
         }
       ],
-      "registryDependencies": ["navigation-menu"]
+      "registryDependencies": ["base/navigation-menu"]
     }
   ]
 }

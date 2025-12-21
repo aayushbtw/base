@@ -5,9 +5,10 @@
   "description": "Link text with animated brackets.",
   "files": [
     {
-      "path": "registry/ui/animated-link-text.tsx",
+      "path": "registry/default/ui/animated-link-text.tsx",
       "content": "import { cn } from \"@/lib/utils\";\n\nfunction AnimatedLinkText({\n  className,\n  children,\n  ...props\n}: React.ComponentProps<\"span\">) {\n  return (\n    <span\n      className={cn(\n        \"inline-flex items-center text-xs\",\n        \"text-fg-2/70 transition-colors duration-200\",\n        \"group-hover:text-fg-2 group-focus-visible:text-fg-2\",\n        className\n      )}\n      {...props}\n    >\n      <span className=\"transition-transform duration-300 ease-out group-hover:-translate-x-1 group-focus-visible:-translate-x-1\">\n        [\n      </span>\n\n      <span className=\"mx-xs opacity-80 transition-opacity duration-200 group-hover:opacity-100\">\n        {children}\n      </span>\n\n      <span className=\"transition-transform duration-300 ease-out group-hover:translate-x-1 group-focus-visible:translate-x-1\">\n        ]\n      </span>\n    </span>\n  );\n}\n\nexport { AnimatedLinkText };\n",
-      "type": "registry:component"
+      "type": "registry:component",
+      "target": "base/ui/animated-link-text.tsx"
     }
   ],
   "type": "registry:ui"

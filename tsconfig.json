@@ -20,7 +20,7 @@
     ],
     "paths": {
       "@/*": ["./*"],
-      "@/components/*": ["./registry/*"]
+      "@/components/*": ["./registry/default/*"]
     },
     "types": ["./cloudflare-env.d.ts", "node"],
     "strictNullChecks": true
