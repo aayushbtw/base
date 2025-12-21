@@ -4,7 +4,7 @@
   "title": "Navbar",
   "description": "Navbar component with active route detection.",
   "registryDependencies": [
-    "base/navigation-menu"
+    "@base/navigation-menu"
   ],
   "files": [
     {

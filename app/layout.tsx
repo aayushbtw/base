@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Hanken_Grotesk as FontSans } from "next/font/google";
-import "@/components/globals.css";
+import "@/components/styles/globals.css";
 import { Navbar } from "@/components/blocks/navbar";
 import { site } from "@/config/site";
 import { cn } from "@/lib/utils";

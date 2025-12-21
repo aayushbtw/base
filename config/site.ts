@@ -1,4 +1,4 @@
 export const site = {
-  title: "registry",
+  title: "base",
   description: "A simple shadcn registry for my projects",
 };

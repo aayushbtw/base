@@ -68,7 +68,7 @@
           "target": "base/navbar.tsx"
         }
       ],
-      "registryDependencies": ["base/navigation-menu"]
+      "registryDependencies": ["@base/navigation-menu"]
     }
   ]
 }
